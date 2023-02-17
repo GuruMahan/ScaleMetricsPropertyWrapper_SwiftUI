@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ScaledMetric var imageSize:CGFloat = 100
+    
     var body: some View {
         VStack {
+            
+            
             Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+                .resizable()
+                .frame(width: imageSize,height: imageSize)
+            
+            Text("ScaledMetric!")
+               // .frame(width: imageSize,height: imageSize)
+              //  .background(Color.red)
         }
         .padding()
     }
